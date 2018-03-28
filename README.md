@@ -4,6 +4,8 @@ This simple application retrieves the top 1 million sites on Alexa and scrapes t
 
 My goal is to make this application completely self sufficient, where a user can clone it to their box, run a single python file, and get going. Though I suspect splitting up the scraper and the web server is a good practice to have.  
 
+<a href="https://i.imgur.com/jG1msrQg.png" target="_blank">Screenshot</a>
+
 ## Getting Started
 
 Make sure you have an internet connection and python 2.7.  

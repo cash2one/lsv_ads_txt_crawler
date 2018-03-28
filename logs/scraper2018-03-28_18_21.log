@@ -1,0 +1,16 @@
+2018-03-28 18:21:12,259 INFO Creating database table.
+2018-03-28 18:21:12,259 INFO Database table created.
+2018-03-28 18:21:20,819 INFO Creating database table.
+2018-03-28 18:21:20,819 INFO Database table created.
+2018-03-28 18:21:52,657 INFO Creating database table.
+2018-03-28 18:21:52,657 INFO Database table created.
+2018-03-28 18:21:58,036 INFO google.com Starting scrape.
+2018-03-28 18:21:58,645 INFO google.com No ads.txt found.
+2018-03-28 18:21:58,645 INFO youtube.com Starting scrape.
+2018-03-28 18:21:58,750 INFO youtube.com Scrape successful, committed to database.
+2018-03-28 18:21:58,759 INFO facebook.com Starting scrape.
+2018-03-28 18:21:59,176 INFO facebook.com No ads.txt found.
+2018-03-28 18:21:59,184 INFO baidu.com Starting scrape.
+2018-03-28 18:22:00,503 INFO baidu.com No ads.txt found.
+2018-03-28 18:22:00,513 INFO wikipedia.org Starting scrape.
+2018-03-28 18:22:01,375 INFO wikipedia.org No ads.txt found.

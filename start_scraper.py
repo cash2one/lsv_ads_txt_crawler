@@ -96,6 +96,6 @@ def scrape(start, end):
 
 init_db()
 get_domains_list()
-scrape(1, 5)  # Scrape 1st domain in list to 10th domain in list.
+scrape(1, 10)  # Scrape 1st domain in list to 10th domain in list.
 c.close()
 conn.close()
