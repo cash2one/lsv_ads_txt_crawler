@@ -25,7 +25,7 @@ There's no real "installation" as long as all modules below are installed.
 Call start_scraper, and start_web_server and it'll get going. By default I am scraping the top 10 sites from the Alexa top 10 million. 
 
 ```
-python start_scraper.y
+python start_scraper.py
 ```
 
 ```
