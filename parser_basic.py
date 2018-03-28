@@ -5,20 +5,23 @@
 # Ads.txt Scraper Function, this only scrapes the URL and expects a good response. All other responses are ignored.
 # This should push scraped ads.txt to a parser which will write the entries to a database.
 
-import logging
-from modules import scrape_domains, get_domains, get_domains_and_unzip, import_with_pandas
-import sqlite3
+from modules import scrape_domains, get_domains_list
 from datetime import datetime
+import logging
+import sqlite3
 import time
 
+database_location = 'db/adstxt.db'
+logs_location = 'logs/'
+
 logger = logging.getLogger('ads_txt_crawler_lsv1')
-log_handler = logging.FileHandler('logs/scraper{:%Y-%m-%d_%H_%M}.log'.format(datetime.now()))
+log_handler = logging.FileHandler(logs_location + 'scraper{:%Y-%m-%d_%H_%M}.log'.format(datetime.now()))
 log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 log_handler.setFormatter(log_formatter)
 logger.addHandler(log_handler)
 logger.setLevel(logging.INFO)
 
-conn = sqlite3.connect('db/adstxt.db')
+conn = sqlite3.connect(database_location)
 c = conn.cursor()
 
 
@@ -33,6 +36,14 @@ def init_db():
     except sqlite3.Error as er:
         logger.error("Failed to init db:", er)
 
+def remove_existing_rows(site):
+    try:
+        logger.debug("Deleting entry for : {0}".format(site))
+        c.execute("DELETE FROM adstxt WHERE domain=?", (site,))
+        conn.commit()
+        logger.debug("Deleted entry for : {0}".format(site))
+    except sqlite3.Error as er:
+        logger.info("Failed to remove existing row:", er)
 
 def dynamic_data_entry(domain, ssp=None, account_id=None, relationship=None, certauth=None):
     try:
@@ -46,17 +57,6 @@ def dynamic_data_entry(domain, ssp=None, account_id=None, relationship=None, cer
         logger.debug("Rows inserted: {0},{1},{2},{3}".format(domain, ssp, account_id, relationship))
     except sqlite3.Error as er:
         logger.error("Failed to write row:", er)
-
-
-def remove_existing_rows(site):
-    try:
-        logger.debug("Deleting entry for : {0}".format(site))
-        c.execute("DELETE FROM adstxt WHERE domain=?", (site,))
-        conn.commit()
-        logger.debug("Deleted entry for : {0}".format(site))
-    except sqlite3.Error as er:
-        logger.info("Failed to remove existing row:", er)
-
 
 def read_domains_to_scrape(low, high):
     try:
@@ -92,9 +92,7 @@ def scrape(start, end):
 
 
 init_db()
-get_domains()
-get_domains_and_unzip()
-import_with_pandas()
+get_domains_list()
 scrape(1, 10)
 c.close()
 conn.close()
