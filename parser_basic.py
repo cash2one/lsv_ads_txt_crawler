@@ -91,10 +91,10 @@ def scrape(start, end):
             pass
 
 
-#init_db()
-#get_domains()
-#get_domains_and_unzip()
-#import_with_pandas()
-scrape(50000, 100000)
+init_db()
+get_domains()
+get_domains_and_unzip()
+import_with_pandas()
+scrape(1, 10)
 c.close()
 conn.close()
