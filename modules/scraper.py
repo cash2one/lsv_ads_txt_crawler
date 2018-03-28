@@ -30,4 +30,5 @@ def scrape_domains(domain_to_scrape):
                 return r.text.splitlines()
 
     except:
+        # Don't care if something fails because we are taking care of bad responses in the scraping function.
         pass

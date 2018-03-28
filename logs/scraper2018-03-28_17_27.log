@@ -1,0 +1,22 @@
+2018-03-28 17:27:25,141 INFO Creating database table.
+2018-03-28 17:27:25,151 INFO Database table created.
+2018-03-28 17:27:29,045 INFO google.com Starting scrape.
+2018-03-28 17:27:29,540 INFO google.com No ads.txt found.
+2018-03-28 17:27:29,542 INFO youtube.com Starting scrape.
+2018-03-28 17:27:29,653 INFO youtube.com Scrape successful, committed to database.
+2018-03-28 17:27:29,653 INFO facebook.com Starting scrape.
+2018-03-28 17:27:30,078 INFO facebook.com No ads.txt found.
+2018-03-28 17:27:30,078 INFO baidu.com Starting scrape.
+2018-03-28 17:27:31,352 INFO baidu.com No ads.txt found.
+2018-03-28 17:27:31,352 INFO wikipedia.org Starting scrape.
+2018-03-28 17:27:32,301 INFO wikipedia.org No ads.txt found.
+2018-03-28 17:27:32,301 INFO yahoo.com Starting scrape.
+2018-03-28 17:27:33,318 INFO yahoo.com No ads.txt found.
+2018-03-28 17:27:33,319 INFO reddit.com Starting scrape.
+2018-03-28 17:27:33,578 INFO reddit.com Scrape successful, committed to database.
+2018-03-28 17:27:33,578 INFO google.co.in Starting scrape.
+2018-03-28 17:27:33,911 INFO google.co.in No ads.txt found.
+2018-03-28 17:27:33,911 INFO qq.com Starting scrape.
+2018-03-28 17:27:35,986 INFO qq.com No ads.txt found.
+2018-03-28 17:27:35,986 INFO taobao.com Starting scrape.
+2018-03-28 17:27:37,924 INFO taobao.com No ads.txt found.
