@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# README
-# Ads.txt Scraper Function, this only scrapes the URL and expects a good response. All other responses are ignored.
-# This should push scraped ads.txt to a parser which will write the entries to a database.
+# Raw scraper function, ignore all errors (and HTTP), expect as fast response.
 
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
@@ -27,7 +25,7 @@ def scrape_domains(domain_to_scrape):
         r = requests.get(url, allow_redirects=1, headers=headers,
                          timeout=1, verify=False)
 
-        if r.status_code == 200 and bool(BeautifulSoup(r.text, "html.parser").find()) == False:
+        if r.status_code == 200 and bool(BeautifulSoup(r.text, "html.parser").find()) is False:
             if r.url != domain_to_scrape:
                 return r.text.splitlines()
 
