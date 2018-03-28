@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+  <head>
+
+      <link rel="stylesheet" type="text/css" href="static/skeleton.css">
+
+  </head>
+
+  <body>
+
+    <h2>Ads.txt Scraper</h2>
+    <h3><a href="/download" target="_blank">Download entire dataset as CSV</a></h3>
+
+    <h4>Showing 1000 most recent scrapes</h4>
+
+    <table id="results" border=1>
+      <thead>
+        <td><b>Date Stamp (GMT)</b></td>
+        <td><b>Domain</b></td>
+        <td><b>SSP</b></td>
+        <td><b>Account ID</b></td>
+        <td><b>Relationship</b></td>
+      </thead>
+
+      {% for row in rows %}
+      <tr>
+        <td>{{row["datestamp"]}}</td>
+        <td><a href="//{{row["domain"]}}/ads.txt" target="_blank">{{row["domain"]}}</a></td>
+        <td>{{row["ssp"]}}</td>
+        <td>{{row["account_id"]}}</td>
+        <td>{{row["relationship"]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <script src='static/tablefilter.js'></script>
+    <script>
+      var filtersConfig = {
+        // instruct TableFilter location to import ressources from
+        base_path: 'https://unpkg.com/tablefilter@latest/dist/tablefilter/',
+        col_2: 'multiple',
+        alternate_rows: true,
+        rows_counter: true,
+        btn_reset: true,
+        loader: true,
+        mark_active_columns: true,
+        highlight_keywords: true,
+        no_results_message: true,
+        col_types: [
+          'date', 'string', 'string',
+          'string', 'string'
+        ],
+
+        col_widths: [
+          '400px','400px', '400px', '400px', '400px'
+        ],
+        responsive: true,
+        auto_filter: {
+            delay: 250 //milliseconds
+        },
+        status_bar: true,
+        extensions: [{
+          name: 'sort',
+          images_path: 'https://unpkg.com/tablefilter@latest/dist/tablefilter/style/themes/'
+        }]
+      };
+
+      var tf = new TableFilter('results', filtersConfig);
+      tf.init();
+      //# sourceURL=pen.js
+
+    </script>
+  </body>
+
+</html>
