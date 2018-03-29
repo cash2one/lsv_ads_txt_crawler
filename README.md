@@ -32,7 +32,7 @@ There's no real "installation" apart from cloning the repo and running the two s
 
 I wrote this script to run by itself as best I could, I don't want to share this with semi technical friends and have them have to do much more than setup python 2.7. Ideally they are just getting the python executable and going to town.
 
-There are two major variable which should be defined before running this script located in [start_scraper.py](https://github.com/lsv1/lsv_ads_txt_crawler/blob/abd5084a9a76c8708d26738cb63e272376ee1b0c/start_scraper.py#L8).
+There are two major variable which should be defined before running this script located in [start_scraper.py](https://github.com/lsv1/lsv_ads_txt_crawler/start_scraper.py#L8).
 
 These two variables denote at what Top 1 Million site rank to start and stop at, the current default value is set to scrape the top 1 million sites. Be careful scraping more than 100,000 sites as sqlite might be a little slow, and also the exported CSV will be over a million rows easily.
 
