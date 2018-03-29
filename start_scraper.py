@@ -6,7 +6,7 @@
 # This should push scraped ads.txt to a parser which will write the entries to a database.
 
 DOMAINS_TO_SCRAPE_START = 1
-DOMAINS_TO_SCRAPE_END = 10
+DOMAINS_TO_SCRAPE_END = 1000
 
 # Logging, need this setup first.
 import logging
