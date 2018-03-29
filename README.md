@@ -10,7 +10,7 @@ Additionally, a simple web app is started that will show the last good 1000 scra
 
 ## See it Live
 
-A version of this is running [here](http://luissastre.ca), but please note my web server is very slow and this is scraping the top 100k sites indefinitely, so please bare with me :)!
+A version of this is running <a href="http://luissastre.ca" target="_blank">here</a>, but please note my web server is very slow and this is scraping the top 100k sites indefinitely, so please bare with me :)!
 
 ## Getting Started
 
