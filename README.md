@@ -59,6 +59,15 @@ Reach the server by going to http://127.0.0.1 (port 80 is used by default)
 
 Once deployed and running the folders db/ and logs/ will be created.
 
+## Planned Enhancements
+
+* Consolidate the scraper and web server into a single script.
+* Include Alexa rank in the ads.txt entries table.
+* Write logic to resume from last scraped domain
+* Add a user input route to scrape domains and output the results for review and download to CSV
+* Add a page/route for graphs, # of sites using SSP.
+* Exclude entries which are invalid, i.e. pubs fail to follow the ads.txt spec and put 'appnexus' instead of 'appnexus.com'   
+
 ## Built With
 
 * [flask](http://flask.pocoo.org/)
