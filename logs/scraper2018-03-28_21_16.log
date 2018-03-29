@@ -1,0 +1,23 @@
+2018-03-28 21:16:31,565 INFO Modules checked, good to proceed.
+2018-03-28 21:16:31,565 INFO Creating database table.
+2018-03-28 21:16:31,565 INFO Database table created.
+2018-03-28 21:16:40,645 INFO google.com Starting scrape.
+2018-03-28 21:16:40,845 INFO google.com No ads.txt found.
+2018-03-28 21:16:40,846 INFO youtube.com Starting scrape.
+2018-03-28 21:16:40,911 INFO youtube.com Scrape successful, committed to database.
+2018-03-28 21:16:40,921 INFO facebook.com Starting scrape.
+2018-03-28 21:16:41,154 INFO facebook.com No ads.txt found.
+2018-03-28 21:16:41,164 INFO baidu.com Starting scrape.
+2018-03-28 21:16:41,184 INFO baidu.com No ads.txt found.
+2018-03-28 21:16:41,193 INFO wikipedia.org Starting scrape.
+2018-03-28 21:16:41,773 INFO wikipedia.org No ads.txt found.
+2018-03-28 21:16:41,786 INFO yahoo.com Starting scrape.
+2018-03-28 21:16:42,874 INFO yahoo.com No ads.txt found.
+2018-03-28 21:16:42,885 INFO reddit.com Starting scrape.
+2018-03-28 21:16:43,114 INFO reddit.com Scrape successful, committed to database.
+2018-03-28 21:16:43,125 INFO google.co.in Starting scrape.
+2018-03-28 21:16:43,265 INFO google.co.in No ads.txt found.
+2018-03-28 21:16:43,276 INFO qq.com Starting scrape.
+2018-03-28 21:16:44,937 INFO qq.com No ads.txt found.
+2018-03-28 21:16:44,946 INFO taobao.com Starting scrape.
+2018-03-28 21:16:46,654 INFO taobao.com No ads.txt found.

@@ -16,7 +16,7 @@ This project requires Python 2.7, though it will probably work with Python 3+ ou
 
 ### Installing
 
-There's no real "installation" as long as all modules below are installed.
+There's no real installation, on start the scraper will automatically call pip and install any missing modules, the list of used modules is below.
 
 ```
 ['backoff==1.4.3', 'beautifulsoup4==4.6.0', 'bs4==0.0.1', 'certifi==2018.1.18', 'chardet==3.0.4', 'click==6.7', 'flask==0.12.2', 'idna==2.6', 'itsdangerous==0.24', 'jinja2==2.10', 'markupsafe==1.0', 'numpy==1.14.1', 'pandas==0.22.0', 'pip==9.0.1', 'python-dateutil==2.6.1', 'pytz==2018.3', 'requests==2.18.4', 'setuptools==38.5.1', 'six==1.11.0', 'sqlalchemy==1.2.5', 'urllib3==1.22', 'werkzeug==0.14.1', 'wheel==0.30.0']

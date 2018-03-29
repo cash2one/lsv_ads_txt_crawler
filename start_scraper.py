@@ -5,9 +5,13 @@
 # Ads.txt Scraper Function, this only scrapes the URL and expects a good response. All other responses are ignored.
 # This should push scraped ads.txt to a parser which will write the entries to a database.
 
+DOMAINS_TO_SCRAPE_START = 1
+DOMAINS_TO_SCRAPE_END = 10
+
 # Logging, need this setup first.
 import logging
 from datetime import datetime
+
 logs_location = 'logs/'
 logger = logging.getLogger('ads_txt_crawler_lsv1')
 log_handler = logging.FileHandler(logs_location + 'scraper{:%Y-%m-%d_%H_%M}.log'.format(datetime.now()))
@@ -18,6 +22,8 @@ logger.setLevel(logging.INFO)
 
 # Install any missing modules and prepare to scrape.
 import pip
+
+
 def init_modules():
     packages = ['backoff', 'beautifulsoup4', 'bs4', 'certifi', 'chardet',
                 'click', 'flask', 'idna', 'itsdangerous', 'jinja2', 'markupsafe',
@@ -34,12 +40,10 @@ def init_modules():
 
 from modules import scrape_domains, get_domains_list
 
-
 import sqlite3
 import time
 
 database_location = 'db/adstxt.db'
-
 
 conn = sqlite3.connect(database_location)
 c = conn.cursor()
@@ -117,6 +121,7 @@ def scrape(start, end):
 init_modules()
 init_db()
 get_domains_list()
-scrape(1, 1000)  # Scrape 1st domain in list to 10th domain in list.
+logger.info("Probably got domains succesfully.")  # Need to refactor this at some point.
+scrape(DOMAINS_TO_SCRAPE_START, DOMAINS_TO_SCRAPE_END)  # Scrape domains start and stop.
 c.close()
 conn.close()
