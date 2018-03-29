@@ -55,6 +55,10 @@ python start_web_server.py
 
 Reach the server by going to http://127.0.0.1 (port 80 is used by default)
 
+## Database and Logging
+
+Once deployed and running the folders db/ and logs/ will be created.
+
 ## Built With
 
 * [flask](http://flask.pocoo.org/)
